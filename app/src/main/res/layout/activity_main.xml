@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/expression_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_weight="5"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="bottom|end"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:shadowColor="@color/glow"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="40"
+            android:text="@string/display_expression"
+            android:textColor="@color/white"
+            android:textSize="60sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/result_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="end"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/display_result"
+            android:textColor="@color/gray"
+            android:textSize="35sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <!--===========================-->
+    <!--===========================-->
+    <!-- Panel-->
+    <!--===========================-->
+    <!--===========================-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <!--===========================-->
+        <!--===========================-->
+        <!-- Row 1 -->
+        <!--===========================-->
+        <!--===========================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="middle">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="clearAllOnClick"
+                android:text="@string/btn_clear"
+                android:textColor="@color/main_color"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="deleteOnClick"
+                android:text="@string/btn_delete"
+                android:textColor="@color/main_color"
+                android:textSize="50sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="exponentiationOnClick"
+                android:text="@string/btn_exponent"
+                android:textColor="@color/main_color"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="divisionOnClick"
+                android:text="@string/btn_division"
+                android:textColor="@color/main_color"
+                android:textSize="35sp"
+                app:backgroundTint="@color/dark_2" />
+
+        </LinearLayout>
+
+        <!--===========================-->
+        <!--===========================-->
+        <!-- Row 2 -->
+        <!--===========================-->
+        <!--===========================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="middle">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="sevenOnClick"
+                android:text="@string/btn_7"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="eightOnClick"
+                android:text="@string/btn_8"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="nineOnClick"
+                android:text="@string/btn_9"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="multiplicationOnClick"
+                android:text="@string/btn_multiplication"
+                android:textColor="@color/main_color"
+                android:textSize="35sp"
+                app:backgroundTint="@color/dark_2" />
+
+        </LinearLayout>
+
+        <!--===========================-->
+        <!--===========================-->
+        <!-- Row 3 -->
+        <!--===========================-->
+        <!--===========================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="middle">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="fourOnClick"
+                android:text="@string/btn_4"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="fiveOnClick"
+                android:text="@string/btn_5"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="sixOnClick"
+                android:text="@string/btn_6"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="subtractionOnClick"
+                android:text="@string/btn_subtraction"
+                android:textColor="@color/main_color"
+                android:textSize="35sp"
+                app:backgroundTint="@color/dark_2" />
+
+        </LinearLayout>
+
+        <!--===========================-->
+        <!--===========================-->
+        <!-- Row 4 -->
+        <!--===========================-->
+        <!--===========================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="middle">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="oneOnClick"
+                android:text="@string/btn_1"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="twoOnClick"
+                android:text="@string/btn_2"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="threeOnClick"
+                android:text="@string/btn_3"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="additionOnClick"
+                android:text="@string/btn_addition"
+                android:textColor="@color/main_color"
+                android:textSize="35sp"
+                app:backgroundTint="@color/dark_2" />
+
+        </LinearLayout>
+
+        <!--===========================-->
+        <!--===========================-->
+        <!-- Row 5 -->
+        <!--===========================-->
+        <!--===========================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="middle">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="zeroOnClick"
+                android:text="@string/btn_0"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="dotOnClick"
+                android:text="@string/btn_dot"
+                android:textColor="@color/gray"
+                android:textSize="30sp"
+                app:backgroundTint="@color/dark_2" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:forceDarkAllowed="false"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="2.11"
+                android:background="@drawable/gradient_1"
+                app:backgroundTint="@null"
+                android:fontFamily="@font/poppins_regular"
+                android:onClick="resultOnClick"
+                android:text="@string/btn_res"
+                android:textColor="@color/dark_1"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

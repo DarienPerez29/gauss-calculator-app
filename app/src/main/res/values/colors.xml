@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_1">#0B1014</color>
+    <color name="dark_2">#0D1419</color>
+    <color name="gray">#8F9AA5</color>
+    <color name="main_color">#FFA200</color>
+    <color name="secondary_color">#2EEDDD</color>
+    <color name="danger">#EC0000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gradient_1_1">#EA6207</color>
+    <color name="gradient_1_2">#FFA200</color>
+
+    <color name="glow">#BEC2C7</color>
+
+</resources>
